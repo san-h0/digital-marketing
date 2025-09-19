@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Learning Platform by Sanchith A.S</title>
+    <meta name="description" content="Comprehensive Digital Marketing Learning Platform created by Sanchith A.S">
+    <meta name="author" content="Sanchith A.S">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Performance optimization -->
+    <meta name="theme-color" content="#EE1C25">
+</head>
+<body>
+    <header class="header">
+        <div class="hero-section">
+            <div class="hero-background">
+                <div class="flame-overlay"></div>
+                <img src="tanjiro.jpg" alt="Digital Marketing Background" class="hero-image">
+            </div>
+            <div class="hero-content">
+                <h1 class="main-title">DIGITAL MARKETING</h1>
+                <p class="hero-subtitle">Master the Art of Digital Growth</p>
+                <div class="creator-signature">
+                    <span class="created-by">Created by</span>
+                    <span class="creator-name">Sanchith A.S</span>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">7</span>
+                        <span class="stat-label">Modules</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">25</span>
+                        <span class="stat-label">Questions Each</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="completion-rate">0%</span>
+                        <span class="stat-label">Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <i class="fas fa-fire flame"></i>
+                    <span>DM Learning</span>
+                    <small class="version-info">v2.1</small>
+                </div>
+                <ul class="nav-list">
+                    <li><button class="nav-btn active" onclick="navigate('overview')" data-section="overview">
+                        <i class="fas fa-home"></i> Overview
+                    </button></li>
+                    <li><button class="nav-btn" onclick="navigate('roadmap')" data-section="roadmap">
+                        <i class="fas fa-map"></i> Roadmap
+                    </button></li>
+                    <li><button class="nav-btn" onclick="navigate('modules')" data-section="modules">
+                        <i class="fas fa-book"></i> Modules
+                    </button></li>
+                    <li><button class="nav-btn" onclick="navigate('progress')" data-section="progress">
+                        <i class="fas fa-chart-line"></i> Progress
+                    </button></li>
+                    <li><button class="nav-btn" onclick="navigate('planner')" data-section="planner">
+                        <i class="fas fa-tasks"></i> Planner
+                    </button></li>
+                    <li><button class="nav-btn" onclick="navigate('resources')" data-section="resources">
+                        <i class="fas fa-link"></i> Resources
+                    </button></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Overview Section -->
+            <section id="overview" class="section active">
+                <div class="welcome-card">
+                    <h2>Welcome to Your Digital Marketing Journey</h2>
+                    <p>Master SEO, social media, content creation, and more with our structured learning approach. Each module includes comprehensive YouTube tutorials, MCQ quizzes worth 50 marks (25 questions), and progress tracking.</p>
+                    <div class="quick-actions">
+                        <button class="btn btn-primary" onclick="navigate('modules')">
+                            <i class="fas fa-play"></i> Start Learning
+                        </button>
+                        <button class="btn btn-secondary" onclick="navigate('planner')">
+                            <i class="fas fa-calendar"></i> View Today's Tasks
+                        </button>
+                    </div>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>SEO Mastery</h3>
+                        <p>Learn to optimize websites for search engines with comprehensive YouTube tutorials.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-module="seo"></div>
+                        </div>
+                        <div class="score-display">
+                            <span class="current-score">Score: <span id="seo-score">0</span>/50</span>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3>Content Marketing</h3>
+                        <p>Create compelling content that engages and converts your audience.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-module="content"></div>
+                        </div>
+                        <div class="score-display">
+                            <span class="current-score">Score: <span id="content-score">0</span>/50</span>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>Social Media</h3>
+                        <p>Build brand presence across all major social media platforms.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-module="social"></div>
+                        </div>
+                        <div class="score-display">
+                            <span class="current-score">Score: <span id="social-score">0</span>/50</span>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Marketing</h3>
+                        <p>Develop effective email campaigns that nurture and convert leads.</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-module="email"></div>
+                        </div>
+                        <div class="score-display">
+                            <span class="current-score">Score: <span id="email-score">0</span>/50</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Roadmap Section -->
+            <section id="roadmap" class="section">
+                <div class="section-header">
+                    <h2>Learning Roadmap</h2>
+                    <p>Your journey from September 15, 2025 to December 31, 2025</p>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item completed" data-module="seo">
+                        <div class="timeline-marker">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>SEO Fundamentals</h3>
+                            <p class="timeline-date">Sep 15 - Sep 30, 2025</p>
+                            <p>Master keyword research, on-page optimization, and technical SEO with 6+ hours of video content.</p>
+                            <div class="timeline-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-module="seo"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-module="content">
+                        <div class="timeline-marker">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Content Marketing</h3>
+                            <p class="timeline-date">Oct 1 - Oct 15, 2025</p>
+                            <p>Create compelling content strategies with comprehensive tutorial series.</p>
+                            <div class="timeline-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-module="content"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-module="social">
+                        <div class="timeline-marker">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Social Media Marketing</h3>
+                            <p class="timeline-date">Oct 16 - Oct 31, 2025</p>
+                            <p>Build and manage social media presence with expert tutorials.</p>
+                            <div class="timeline-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-module="social"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-module="email">
+                        <div class="timeline-marker">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Email Marketing</h3>
+                            <p class="timeline-date">Nov 1 - Nov 10, 2025</p>
+                            <p>Design and implement effective email marketing campaigns.</p>
+                            <div class="timeline-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-module="email"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-module="ads">
+                        <div class="timeline-marker">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Paid Advertising</h3>
+                            <p class="timeline-date">Nov 11 - Nov 20, 2025</p>
+                            <p>Master Google Ads, Facebook Ads, and YouTube advertising.</p>
+                            <div class="timeline-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-module="ads"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-module="analytics">
+                        <div class="timeline-marker">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Analytics & Data</h3>
+                            <p class="timeline-date">Nov 21 - Nov 30, 2025</p>
+                            <p>Track, measure, and optimize marketing performance.</p>
+                            <div class="timeline-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-module="analytics"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item" data-module="portfolio">
+                        <div class="timeline-marker">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Portfolio Building</h3>
+                            <p class="timeline-date">Dec 1 - Dec 31, 2025</p>
+                            <p>Create your professional digital marketing portfolio.</p>
+                            <div class="timeline-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-module="portfolio"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Modules Section -->
+            <section id="modules" class="section">
+                <div class="section-header">
+                    <h2>Learning Modules</h2>
+                    <p>Interactive lessons with YouTube tutorials and comprehensive quizzes</p>
+                </div>
+
+                <div class="modules-grid">
+                    <!-- SEO Module -->
+                    <div class="module-card" data-module="seo" onclick="openModule('seo')">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="module-status">
+                                <i class="fas fa-circle status-icon" data-status="not-started"></i>
+                            </div>
+                        </div>
+                        <h3>SEO Fundamentals</h3>
+                        <p>Master search engine optimization with comprehensive video tutorials</p>
+                        <div class="module-stats">
+                            <span><i class="fas fa-clock"></i> 6+ hours</span>
+                            <span><i class="fas fa-video"></i> 3 videos</span>
+                            <span><i class="fas fa-question-circle"></i> 25 MCQs</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-module="seo"></div>
+                        </div>
+                        <div class="score-display">
+                            <span class="current-score">Score: <span class="score-value" data-module="seo">0</span>/50</span>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn-primary btn-sm module-btn" onclick="event.stopPropagation(); startModule('seo')">
+                                <i class="fas fa-play"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Content Marketing Module -->
+                    <div class="module-card" data-module="content" onclick="openModule('content')">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-edit"></i>
+                            </div>
+                            <div class="module-status">
+                                <i class="fas fa-circle status-icon" data-status="not-started"></i>
+                            </div>
+                        </div>
+                        <h3>Content Marketing</h3>
+                        <p>Create engaging and converting content strategies</p>
+                        <div class="module-stats">
+                            <span><i class="fas fa-clock"></i> 5+ hours</span>
+                            <span><i class="fas fa-video"></i> 3 videos</span>
+                            <span><i class="fas fa-question-circle"></i> 25 MCQs</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-module="content"></div>
+                        </div>
+                        <div class="score-display">
+                            <span class="current-score">Score: <span class="score-value" data-module="content">0</span>/50</span>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn-primary btn-sm module-btn" onclick="event.stopPropagation(); startModule('content')">
+                                <i class="fas fa-play"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Module -->
+                    <div class="module-card" data-module="social" onclick="openModule('social')">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-share-alt"></i>
+                            </div>
+                            <div class="module-status">
+                                <i class="fas fa-circle status-icon" data-status="not-started"></i>
+                            </div>
+                        </div>
+                        <h3>Social Media Marketing</h3>
+                        <p>Build brand presence on social platforms</p>
+                        <div class="module-stats">
+                            <span><i class="fas fa-clock"></i> 7+ hours</span>
+                            <span><i class="fas fa-video"></i> 3 videos</span>
+                            <span><i class="fas fa-question-circle"></i> 25 MCQs</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-module="social"></div>
+                        </div>
+                        <div class="score-display">
+                            <span class="current-score">Score: <span class="score-value" data-module="social">0</span>/50</span>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn-primary btn-sm module-btn" onclick="event.stopPropagation(); startModule('social')">
+                                <i class="fas fa-play"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Email Marketing Module -->
+                    <div class="module-card" data-module="email" onclick="openModule('email')">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="module-status">
+                                <i class="fas fa-circle status-icon" data-status="not-started"></i>
+                            </div>
+                        </div>
+                        <h3>Email Marketing</h3>
+                        <p>Design effective email campaigns</p>
+                        <div class="module-stats">
+                            <span><i class="fas fa-clock"></i> 4+ hours</span>
+                            <span><i class="fas fa-video"></i> 3 videos</span>
+                            <span><i class="fas fa-question-circle"></i> 25 MCQs</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-module="email"></div>
+                        </div>
+                        <div class="score-display">
+                            <span class="current-score">Score: <span class="score-value" data-module="email">0</span>/50</span>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn-primary btn-sm module-btn" onclick="event.stopPropagation(); startModule('email')">
+                                <i class="fas fa-play"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Paid Advertising Module -->
+                    <div class="module-card" data-module="ads" onclick="openModule('ads')">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div class="module-status">
+                                <i class="fas fa-circle status-icon" data-status="not-started"></i>
+                            </div>
+                        </div>
+                        <h3>Paid Advertising</h3>
+                        <p>Master Google Ads and social media ads</p>
+                        <div class="module-stats">
+                            <span><i class="fas fa-clock"></i> 4+ hours</span>
+                            <span><i class="fas fa-video"></i> 3 videos</span>
+                            <span><i class="fas fa-question-circle"></i> 25 MCQs</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-module="ads"></div>
+                        </div>
+                        <div class="score-display">
+                            <span class="current-score">Score: <span class="score-value" data-module="ads">0</span>/50</span>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn-primary btn-sm module-btn" onclick="event.stopPropagation(); startModule('ads')">
+                                <i class="fas fa-play"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Analytics Module -->
+                    <div class="module-card" data-module="analytics" onclick="openModule('analytics')">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div class="module-status">
+                                <i class="fas fa-circle status-icon" data-status="not-started"></i>
+                            </div>
+                        </div>
+                        <h3>Analytics & Data</h3>
+                        <p>Track and optimize performance</p>
+                        <div class="module-stats">
+                            <span><i class="fas fa-clock"></i> 3+ hours</span>
+                            <span><i class="fas fa-video"></i> 3 videos</span>
+                            <span><i class="fas fa-question-circle"></i> 25 MCQs</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-module="analytics"></div>
+                        </div>
+                        <div class="score-display">
+                            <span class="current-score">Score: <span class="score-value" data-module="analytics">0</span>/50</span>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn-primary btn-sm module-btn" onclick="event.stopPropagation(); startModule('analytics')">
+                                <i class="fas fa-play"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Building Module -->
+                    <div class="module-card" data-module="portfolio" onclick="openModule('portfolio')">
+                        <div class="module-header">
+                            <div class="module-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="module-status">
+                                <i class="fas fa-circle status-icon" data-status="not-started"></i>
+                            </div>
+                        </div>
+                        <h3>Portfolio Building</h3>
+                        <p>Create your professional portfolio</p>
+                        <div class="module-stats">
+                            <span><i class="fas fa-clock"></i> 3+ hours</span>
+                            <span><i class="fas fa-video"></i> 2 videos</span>
+                            <span><i class="fas fa-question-circle"></i> 25 MCQs</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" data-module="portfolio"></div>
+                        </div>
+                        <div class="score-display">
+                            <span class="current-score">Score: <span class="score-value" data-module="portfolio">0</span>/50</span>
+                        </div>
+                        <div class="module-actions">
+                            <button class="btn btn-primary btn-sm module-btn" onclick="event.stopPropagation(); startModule('portfolio')">
+                                <i class="fas fa-play"></i> Start Learning
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Progress Section -->
+            <section id="progress" class="section">
+                <div class="section-header">
+                    <h2>Learning Progress</h2>
+                    <p>Track your achievements and quiz scores</p>
+                </div>
+
+                <div class="progress-dashboard">
+                    <div class="progress-overview">
+                        <div class="progress-card">
+                            <div class="progress-circle">
+                                <svg class="progress-ring" width="120" height="120">
+                                    <circle class="progress-ring-circle" stroke="#EE1C25" stroke-width="8" 
+                                            fill="transparent" r="52" cx="60" cy="60"/>
+                                </svg>
+                                <div class="progress-text">
+                                    <span class="progress-percentage">0%</span>
+                                    <span class="progress-label">Complete</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="progress-stats">
+                            <div class="stat-item">
+                                <span class="stat-value" id="completed-modules">0</span>
+                                <span class="stat-label">Modules Completed</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="total-score">0</span>
+                                <span class="stat-label">Total Score</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value" id="average-score">0%</span>
+                                <span class="stat-label">Average Score</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modules-progress">
+                        <h3>Module Scores & Progress</h3>
+                        <div class="progress-list">
+                            <div class="progress-item" data-module="seo">
+                                <div class="progress-info">
+                                    <span class="module-name">SEO Fundamentals</span>
+                                    <span class="progress-score">Score: <span class="score-display">0</span>/50</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item" data-module="content">
+                                <div class="progress-info">
+                                    <span class="module-name">Content Marketing</span>
+                                    <span class="progress-score">Score: <span class="score-display">0</span>/50</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item" data-module="social">
+                                <div class="progress-info">
+                                    <span class="module-name">Social Media Marketing</span>
+                                    <span class="progress-score">Score: <span class="score-display">0</span>/50</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item" data-module="email">
+                                <div class="progress-info">
+                                    <span class="module-name">Email Marketing</span>
+                                    <span class="progress-score">Score: <span class="score-display">0</span>/50</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item" data-module="ads">
+                                <div class="progress-info">
+                                    <span class="module-name">Paid Advertising</span>
+                                    <span class="progress-score">Score: <span class="score-display">0</span>/50</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item" data-module="analytics">
+                                <div class="progress-info">
+                                    <span class="module-name">Analytics & Data</span>
+                                    <span class="progress-score">Score: <span class="score-display">0</span>/50</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-item" data-module="portfolio">
+                                <div class="progress-info">
+                                    <span class="module-name">Portfolio Building</span>
+                                    <span class="progress-score">Score: <span class="score-display">0</span>/50</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Planner Section -->
+            <section id="planner" class="section">
+                <div class="section-header">
+                    <h2>Learning Planner</h2>
+                    <p>Organize your daily learning tasks and stay on track</p>
+                </div>
+
+                <div class="planner-dashboard">
+                    <div class="planner-controls">
+                        <div class="date-selector">
+                            <button class="btn btn-secondary" onclick="changeDate(-1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <span class="current-date" id="current-date">Today</span>
+                            <button class="btn btn-secondary" onclick="changeDate(1)">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+
+                        <button class="btn btn-primary" onclick="openAddTaskModal()">
+                            <i class="fas fa-plus"></i> Add Task
+                        </button>
+                    </div>
+
+                    <div class="tasks-container">
+                        <div class="task-categories">
+                            <div class="category-section">
+                                <h3>
+                                    <i class="fas fa-clock text-orange"></i>
+                                    Today's Tasks
+                                    <span class="task-count" id="today-count">0</span>
+                                </h3>
+                                <div class="tasks-list" id="today-tasks">
+                                    <!-- Tasks will be dynamically added here -->
+                                </div>
+                            </div>
+
+                            <div class="category-section">
+                                <h3>
+                                    <i class="fas fa-calendar text-blue"></i>
+                                    This Week
+                                    <span class="task-count" id="week-count">0</span>
+                                </h3>
+                                <div class="tasks-list" id="week-tasks">
+                                    <!-- Tasks will be dynamically added here -->
+                                </div>
+                            </div>
+
+                            <div class="category-section">
+                                <h3>
+                                    <i class="fas fa-check-circle text-green"></i>
+                                    Completed
+                                    <span class="task-count" id="completed-count">0</span>
+                                </h3>
+                                <div class="tasks-list" id="completed-tasks">
+                                    <!-- Completed tasks will be shown here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="study-streak">
+                        <h3>Study Streak</h3>
+                        <div class="streak-calendar">
+                            <div class="streak-days" id="streak-calendar">
+                                <!-- Calendar will be generated here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources Section -->
+            <section id="resources" class="section">
+                <div class="section-header">
+                    <h2>Resources & Study Materials</h2>
+                    <p>Tools, notes, and exercises for your learning journey</p>
+                </div>
+
+                <div class="resources-tabs">
+                    <button class="tab-btn active" onclick="switchTab('tools')">
+                        <i class="fas fa-tools"></i> Tools
+                    </button>
+                    <button class="tab-btn" onclick="switchTab('notes')">
+                        <i class="fas fa-sticky-note"></i> Notes & Exercises
+                    </button>
+                    <button class="tab-btn" onclick="switchTab('learning')">
+                        <i class="fas fa-graduation-cap"></i> Learning Resources
+                    </button>
+                </div>
+
+                <div id="tools-tab" class="tab-content active">
+                    <div class="resources-grid">
+                        <div class="resource-category">
+                            <h3><i class="fas fa-tools"></i> Marketing Tools</h3>
+                            <div class="resource-list">
+                                <a href="https://analytics.google.com" target="_blank" class="resource-link">
+                                    <i class="fab fa-google"></i> Google Analytics
+                                </a>
+                                <a href="https://search.google.com/search-console" target="_blank" class="resource-link">
+                                    <i class="fab fa-google"></i> Google Search Console
+                                </a>
+                                <a href="https://ads.google.com" target="_blank" class="resource-link">
+                                    <i class="fab fa-google"></i> Google Ads
+                                </a>
+                                <a href="https://business.facebook.com" target="_blank" class="resource-link">
+                                    <i class="fab fa-facebook"></i> Facebook Business
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h3><i class="fas fa-chart-line"></i> Analytics</h3>
+                            <div class="resource-list">
+                                <a href="https://semrush.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-chart-bar"></i> SEMrush
+                                </a>
+                                <a href="https://ahrefs.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-link"></i> Ahrefs
+                                </a>
+                                <a href="https://hotjar.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-eye"></i> Hotjar
+                                </a>
+                                <a href="https://mailchimp.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-envelope"></i> Mailchimp
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h3><i class="fas fa-palette"></i> Design</h3>
+                            <div class="resource-list">
+                                <a href="https://canva.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-paint-brush"></i> Canva
+                                </a>
+                                <a href="https://figma.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-pencil-alt"></i> Figma
+                                </a>
+                                <a href="https://unsplash.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-camera"></i> Unsplash
+                                </a>
+                                <a href="https://pexels.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-image"></i> Pexels
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="notes-tab" class="tab-content">
+                    <div class="notes-section">
+                        <div class="notes-header">
+                            <h3><i class="fas fa-sticky-note"></i> Study Notes & Exercises</h3>
+                            <button class="btn btn-primary" onclick="openNotesModal()">
+                                <i class="fas fa-plus"></i> Add Note
+                            </button>
+                        </div>
+
+                        <div class="notes-grid">
+                            <div class="note-category" data-module="seo">
+                                <h4><i class="fas fa-search"></i> SEO Notes</h4>
+                                <div class="notes-list" id="seo-notes">
+                                    <div class="default-note">
+                                        <h5>SEO Fundamentals Checklist</h5>
+                                        <p>• Keyword research and analysis<br>
+                                        • On-page optimization techniques<br>
+                                        • Technical SEO audit<br>
+                                        • Link building strategies</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="note-category" data-module="content">
+                                <h4><i class="fas fa-edit"></i> Content Marketing Notes</h4>
+                                <div class="notes-list" id="content-notes">
+                                    <div class="default-note">
+                                        <h5>Content Strategy Framework</h5>
+                                        <p>• Audience research and personas<br>
+                                        • Content calendar planning<br>
+                                        • Content formats and distribution<br>
+                                        • Performance measurement</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="note-category" data-module="social">
+                                <h4><i class="fas fa-share-alt"></i> Social Media Notes</h4>
+                                <div class="notes-list" id="social-notes">
+                                    <div class="default-note">
+                                        <h5>Social Media Best Practices</h5>
+                                        <p>• Platform-specific strategies<br>
+                                        • Community management<br>
+                                        • Social media advertising<br>
+                                        • Engagement optimization</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="note-category" data-module="email">
+                                <h4><i class="fas fa-envelope"></i> Email Marketing Notes</h4>
+                                <div class="notes-list" id="email-notes">
+                                    <div class="default-note">
+                                        <h5>Email Campaign Essentials</h5>
+                                        <p>• List building strategies<br>
+                                        • Email design and copy<br>
+                                        • Automation workflows<br>
+                                        • A/B testing methods</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="note-category" data-module="ads">
+                                <h4><i class="fas fa-bullhorn"></i> Paid Advertising Notes</h4>
+                                <div class="notes-list" id="ads-notes">
+                                    <div class="default-note">
+                                        <h5>PPC Campaign Structure</h5>
+                                        <p>• Campaign setup and targeting<br>
+                                        • Ad copy and creative<br>
+                                        • Bid management<br>
+                                        • Performance optimization</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="note-category" data-module="analytics">
+                                <h4><i class="fas fa-chart-bar"></i> Analytics Notes</h4>
+                                <div class="notes-list" id="analytics-notes">
+                                    <div class="default-note">
+                                        <h5>Analytics Setup Guide</h5>
+                                        <p>• Goal and conversion tracking<br>
+                                        • Custom reports and dashboards<br>
+                                        • Data interpretation<br>
+                                        • ROI measurement</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="learning-tab" class="tab-content">
+                    <div class="learning-resources">
+                        <div class="resource-category">
+                            <h3><i class="fas fa-graduation-cap"></i> Additional Learning</h3>
+                            <div class="resource-list">
+                                <a href="https://moz.com/learn" target="_blank" class="resource-link">
+                                    <i class="fas fa-search"></i> Moz SEO Learning Center
+                                </a>
+                                <a href="https://www.hubspot.com/resources" target="_blank" class="resource-link">
+                                    <i class="fas fa-bullhorn"></i> HubSpot Academy
+                                </a>
+                                <a href="https://skillshare.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-play"></i> Skillshare
+                                </a>
+                                <a href="https://coursera.org" target="_blank" class="resource-link">
+                                    <i class="fas fa-university"></i> Coursera
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="resource-category">
+                            <h3><i class="fas fa-blog"></i> Industry Blogs</h3>
+                            <div class="resource-list">
+                                <a href="https://blog.hootsuite.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-share-alt"></i> Hootsuite Blog
+                                </a>
+                                <a href="https://blog.hubspot.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-bullhorn"></i> HubSpot Blog
+                                </a>
+                                <a href="https://neilpatel.com/blog" target="_blank" class="resource-link">
+                                    <i class="fas fa-user"></i> Neil Patel Blog
+                                </a>
+                                <a href="https://contentmarketinginstitute.com" target="_blank" class="resource-link">
+                                    <i class="fas fa-edit"></i> Content Marketing Institute
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Module Learning Modal -->
+    <div id="moduleModal" class="modal">
+        <div class="modal-content module-modal">
+            <div class="modal-header">
+                <h3 id="module-title">Module Learning</h3>
+                <button class="close-btn" onclick="closeModuleModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="module-learning-content">
+                    <!-- Video tutorials will be loaded here -->
+                    <div class="video-section" id="video-section">
+                        <h4>Learning Videos</h4>
+                        <div class="videos-container" id="videos-container">
+                            <!-- Videos will be dynamically loaded -->
+                        </div>
+                    </div>
+
+                    <div class="quiz-section" id="quiz-section" style="display: none;">
+                        <h4>Knowledge Assessment Quiz</h4>
+                        <div class="quiz-info">
+                            <p><strong>Instructions:</strong> Complete all video tutorials above, then take this 25-question quiz to test your knowledge. You need to score at least 35/50 to pass.</p>
+                            <div class="quiz-stats">
+                                <span><i class="fas fa-question-circle"></i> 25 Questions</span>
+                                <span><i class="fas fa-clock"></i> No time limit</span>
+                                <span><i class="fas fa-star"></i> 50 Points Total</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="startQuiz()">
+                            <i class="fas fa-play"></i> Start Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Modal -->
+    <div id="quizModal" class="modal">
+        <div class="modal-content quiz-modal">
+            <div class="modal-header">
+                <h3 id="quiz-title">Knowledge Assessment</h3>
+                <div class="quiz-progress">
+                    <span id="question-counter">Question 1 of 25</span>
+                    <span id="score-counter">Score: 0/50</span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="quiz-container">
+                    <div class="question-section">
+                        <div class="question-header">
+                            <h4 id="question-text">Loading question...</h4>
+                            <span class="question-points" id="question-points">2 points</span>
+                        </div>
+                        <div class="options-container" id="options-container">
+                            <!-- Options will be dynamically loaded -->
+                        </div>
+                    </div>
+                    <div class="quiz-controls">
+                        <button class="btn btn-secondary" onclick="previousQuestion()" id="prev-btn" disabled>
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <button class="btn btn-primary" onclick="nextQuestion()" id="next-btn">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button class="btn btn-success" onclick="finishQuiz()" id="finish-btn" style="display: none;">
+                            <i class="fas fa-flag-checkered"></i> Finish Quiz
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quiz Results Modal -->
+    <div id="resultsModal" class="modal">
+        <div class="modal-content results-modal">
+            <div class="modal-header">
+                <h3 id="results-title">Quiz Results</h3>
+                <button class="close-btn" onclick="closeResultsModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="results-container">
+                    <div class="score-display-large">
+                        <div class="score-circle">
+                            <span class="score-number" id="final-score">0</span>
+                            <span class="score-total">/50</span>
+                        </div>
+                        <div class="score-percentage" id="score-percentage">0%</div>
+                    </div>
+
+                    <div class="results-details">
+                        <div class="result-item">
+                            <span class="result-label">Correct Answers:</span>
+                            <span class="result-value" id="correct-answers">0/25</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Grade:</span>
+                            <span class="result-value" id="grade">F</span>
+                        </div>
+                        <div class="result-item">
+                            <span class="result-label">Status:</span>
+                            <span class="result-value" id="pass-status">Failed</span>
+                        </div>
+                    </div>
+
+                    <div class="results-actions">
+                        <button class="btn btn-secondary" onclick="retakeQuiz()">
+                            <i class="fas fa-redo"></i> Retake Quiz
+                        </button>
+                        <button class="btn btn-primary" onclick="saveResults()">
+                            <i class="fas fa-save"></i> Save Results
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Task Modal -->
+    <div id="addTaskModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Task</h3>
+                <button class="close-btn" onclick="closeAddTaskModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addTaskForm">
+                    <div class="form-group">
+                        <label for="taskTitle">Task Title</label>
+                        <input type="text" id="taskTitle" name="taskTitle" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskModule">Module</label>
+                        <select id="taskModule" name="taskModule">
+                            <option value="seo">SEO Fundamentals</option>
+                            <option value="content">Content Marketing</option>
+                            <option value="social">Social Media Marketing</option>
+                            <option value="email">Email Marketing</option>
+                            <option value="ads">Paid Advertising</option>
+                            <option value="analytics">Analytics & Data</option>
+                            <option value="portfolio">Portfolio Building</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskPriority">Priority</label>
+                        <select id="taskPriority" name="taskPriority">
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskDueDate">Due Date</label>
+                        <input type="date" id="taskDueDate" name="taskDueDate">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="taskDescription">Description (optional)</label>
+                        <textarea id="taskDescription" name="taskDescription" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeAddTaskModal()">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Add Task</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Notes Modal -->
+    <div id="notesModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add Study Note</h3>
+                <button class="close-btn" onclick="closeNotesModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="addNotesForm">
+                    <div class="form-group">
+                        <label for="noteTitle">Note Title</label>
+                        <input type="text" id="noteTitle" name="noteTitle" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noteModule">Module</label>
+                        <select id="noteModule" name="noteModule">
+                            <option value="seo">SEO Fundamentals</option>
+                            <option value="content">Content Marketing</option>
+                            <option value="social">Social Media Marketing</option>
+                            <option value="email">Email Marketing</option>
+                            <option value="ads">Paid Advertising</option>
+                            <option value="analytics">Analytics & Data</option>
+                            <option value="portfolio">Portfolio Building</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="noteContent">Note Content</label>
+                        <textarea id="noteContent" name="noteContent" rows="8" required 
+                                  placeholder="Add your study notes, key points, or exercises here..."></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" onclick="closeNotesModal()">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Save Note</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModals()"></div>
+
+    <!-- Footer with creator information -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="creator-info">
+                        <span class="footer-brand">Digital Marketing Learning Platform</span>
+                        <span class="footer-version">Version 2.1</span>
+                    </div>
+                    <div class="creator-signature-footer">
+                        <span class="footer-created-by">Created with ❤️ by</span>
+                        <span class="footer-creator-name">Sanchith A.S</span>
+                    </div>
+                </div>
+                <div class="footer-features">
+                    <span>🎯 30+ Hours of Learning Content</span>
+                    <span>📝 175 Quiz Questions</span>
+                    <span>📊 Progress Tracking</span>
+                    <span>📱 Performance Optimized</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
